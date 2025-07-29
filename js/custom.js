@@ -14,3 +14,5 @@ document.addEventListener('visibilitychange', function() {
 		}, 2000);
 	}
 });
+
+hexo.extend.injector.register('body_end', '<script type="text/javascript" src="/js/sakura.js"></script>', 'home');
