@@ -1,9 +1,1 @@
-let navbarBrand=document.querySelector(".navbar-brand"),paths=(navbarBrand.innerHTML=`
-<svg class="svg" width="516.211" height="104.591" viewBox="0 0 516.211 104.591" xmlns="http://www.w3.org/2000/svg">
-<g class="g" id="svgGroup" stroke-linecap="round"     
-fill-rule="evenodd" font-size="9pt" stroke="#000"     
-stroke-width="0.25mm" fill="none" style="stroke:#000;stroke-width:0.25mm;fill:none">
-<path d="省略的内容" vector-effect="non-scaling-stroke"/>
-</g>
-</svg>
-`,document.querySelector(".navbar-brand .svg .g path")),len=paths.getTotalLength();paths.style.setProperty("--l",len),paths.addEventListener("animationend",function(){setTimeout(function(){navbarBrand.classList.add("neon-effect")},100)});
+document.addEventListener("DOMContentLoaded",function(){let s=document.querySelector(".navbar-brand .navbar-title");if(s){var t=s.textContent,a=(s.setAttribute("data-text",t),document.createElement("span")),n=(a.className="navbar-title-wrapper","http://www.w3.org/2000/svg"),i=document.createElementNS(n,"svg");let e=document.createElementNS(n,"text");i.setAttribute("class","navbar-title-svg"),i.setAttribute("viewBox","0 0 500 50"),i.setAttribute("preserveAspectRatio","xMinYMin meet"),e.setAttribute("x","0"),e.setAttribute("y","35"),e.setAttribute("fill","none"),e.setAttribute("stroke","currentColor"),e.setAttribute("stroke-width","1"),e.setAttribute("font-family","Arial, sans-serif"),e.setAttribute("font-size","32"),e.setAttribute("font-weight","bold"),e.textContent=t,i.appendChild(e),a.appendChild(i),s.innerHTML="",s.appendChild(a),setTimeout(()=>{var t=e.getComputedTextLength();e.style.strokeDasharray=Math.ceil(t),e.style.strokeDashoffset=Math.ceil(t),e.animate([{strokeDashoffset:Math.ceil(t)},{strokeDashoffset:0}],{duration:2e3,easing:"ease-in-out"}).finished.then(()=>{s.classList.add("svg-animation-complete"),setTimeout(()=>{s.classList.add("neon-effect")},500)})},100)}});
