@@ -1,0 +1,1 @@
+function loadScript(t,e){var n=document.createElement("script");n.type="text/javascript",n.src=t,n.onload=function(){e()},document.head.appendChild(n)}loadScript("https://code.jquery.com/jquery-3.6.0.min.js",function(){$(function(){$("#loader-container").fadeOut(560)})});
